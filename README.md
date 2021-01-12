@@ -1,5 +1,6 @@
 # V2RAY 部署脚本
 > 这一系列脚本是我用于快速部署v2ray的工具
+
 > 本脚本目前只支持debian 9+ 的vps服务端
 ## Workflow
 * 部署之前
@@ -28,12 +29,12 @@
     ```
   * 执行
     ```bash
-    $ sudo ./v2ray-deployment.sh -d domain.com
+    $ sudo ./v2ray-deployment.sh
     ```
     这个命令将部署v2ray至新服务器
   * 执行
     ```bash
-    $ ./sync-config.sh -cs 
+    $ ./sync-config.sh -cs
     ```
 
 * 快速切换服务器
@@ -42,7 +43,7 @@
 
   * 执行 
     ```bash
-    $ ./switch-vps.sh -a username@hostname -i new_ip_address
+    $ ./switch-vps.sh -a username@hostname -i new_ip_address -d new_domain
     ```
   * 执行
     ```bash

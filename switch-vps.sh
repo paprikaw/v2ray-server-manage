@@ -14,7 +14,10 @@ while getopts ":a:i:d:" opt; do
     i)
         IP=$OPTARG ;;
     d)
-        DOMAIN=$OPTARG ;;
+        sed -i_bak '/DOMAIN/d' $HOME/.profile
+        echo "export DOMAIN=$OPTARG" >> $HOME/.profile
+        export DOMAIN=$OPTARG 
+        ;;
 	:) 
         echo "Invalid option: $OPTARG needs an argument"
         exit 1

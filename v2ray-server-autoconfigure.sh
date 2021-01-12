@@ -1,10 +1,6 @@
 #!/bin/bash
 
 export DEBIAN_FRONTEND=noninteractive
-
-echo ">>> Installing socat"
-apt-get update
-apt-get -yq install socat
 echo ">>> Install v2ray"
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
 echo ">>> Installing acme"
